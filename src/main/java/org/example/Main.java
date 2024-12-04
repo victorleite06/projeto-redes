@@ -70,6 +70,9 @@ public class Main {
 
         JButton botaoSalvar = new JButton();
         botaoSalvar.setBounds(210, 0, 80, 30);
+        botaoSalvar.addActionListener(e -> {
+            logar(campoUsuario, campoSenha);
+        });
         botaoSalvar.setText("Entrar");
 
         JPanel botaoArea = new JPanel();
@@ -88,5 +91,10 @@ public class Main {
 
         frame.add(tituloArea);
         frame.add(bodyArea);
+    }
+
+    private static void logar(JTextField usuario, JTextField senha) {
+        System.out.println(usuario.getText());
+        System.out.println(senha.getText());
     }
 }
